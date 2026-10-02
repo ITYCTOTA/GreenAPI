@@ -1,0 +1,44 @@
+.app-layout {
+  display: flex;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.app-layout__content {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  background-color: #111217;
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    #1c2d56 1px,
+    transparent 0
+  );
+  background-size: 28px 28px;
+}
+
+@media (max-width: 768px) {
+  .app-layout {
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .app-layout__content {
+    display: none;
+  }
+
+  .app-layout--detail-open .app-layout__content {
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .app-layout--detail-open .control-panel {
+    display: none;
+  }
+
+  .app-layout--detail-open .app-layout__content {
+    display: block;
+  }
+}

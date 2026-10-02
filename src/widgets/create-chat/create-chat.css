@@ -1,0 +1,57 @@
+.create-chat-modal {
+  position: fixed;
+  z-index: 10;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: var(--page-padding);
+  background: rgb(0 0 0 / 55%);
+}
+
+.create-chat-modal__dialog {
+  display: flex;
+  width: min(100%, 380px);
+  padding: 24px;
+  flex-direction: column;
+  gap: var(--layout-gap);
+  border: 1px solid #32353e;
+  border-radius: 14px;
+  background: #1b1d23;
+  box-shadow: 0 20px 48px rgb(0 0 0 / 35%);
+}
+
+.create-chat-modal__dialog h2 {
+  font-size: 20px;
+}
+
+.create-chat-modal__dialog > p {
+  color: #aeb4c0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.create-chat-modal__dialog form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-gap);
+}
+
+.create-chat-modal__error {
+  color: #ff9a9a;
+  font-size: 13px;
+}
+
+.create-chat-modal__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--layout-gap);
+}
+
+.create-chat-modal__actions button {
+  padding: var(--space-sm) var(--space-md);
+  border-radius: 8px;
+}
+
+.create-chat-modal__actions button:first-child {
+  color: #c2c7d0;
+}

@@ -1,0 +1,230 @@
+.empty-chat,
+.selected-chat,
+.settings-page {
+  min-height: 100dvh;
+}
+
+.empty-chat {
+  display: grid;
+  place-items: center;
+  padding: var(--page-padding);
+  color: #89909c;
+  text-align: center;
+}
+
+.selected-chat {
+  display: flex;
+  flex-direction: column;
+  background: rgba(17, 18, 23, 0.35);
+}
+.selected-chat__messages {
+  display: flex;
+  min-height: 0;
+  flex: 1;
+  padding: var(--page-padding);
+  flex-direction: column;
+  gap: var(--space-sm);
+  overflow-y: auto;
+}
+
+.selected-chat__header {
+  display: flex;
+  align-items: center;
+  gap: var(--layout-gap);
+  padding: var(--layout-gap) var(--page-padding);
+  background: #17181d;
+  border-bottom: 1px solid #292b32;
+}
+
+.selected-chat__header h1,
+.settings-page h1 {
+  font-size: 16px;
+}
+
+.selected-chat__title {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.selected-chat__title p,
+.settings-page p {
+  color: #89909c;
+  font-size: 13px;
+}
+
+.selected-chat__back {
+  display: inline-flex;
+  padding: var(--space-xs);
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.selected-chat__back img {
+  width: 24px;
+  height: 24px;
+}
+
+.selected-chat__back:hover {
+  background: #292b32;
+}
+
+.selected-chat__placeholder {
+  margin: auto;
+  padding: var(--page-padding);
+  color: #b5b9c2;
+  text-align: center;
+}
+.selected-chat__messages .selected-chat__placeholder {
+  margin: auto;
+}
+.message-bubble {
+  max-width: min(78%, 560px);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: 12px;
+  color: #f4f6fa;
+}
+.message-bubble--outgoing {
+  align-self: flex-end;
+  min-width: 92px;
+  border-bottom-right-radius: 3px;
+  background: #1679dc;
+}
+.message-bubble--incoming {
+  align-self: flex-start;
+  border-bottom-left-radius: 3px;
+  background: #2a2c32;
+}
+.message-bubble p {
+  overflow-wrap: anywhere;
+  line-height: 1.35;
+}
+.message-bubble time {
+  display: block;
+  margin-top: 3px;
+  color: rgb(255 255 255 / 65%);
+  font-size: 11px;
+  text-align: right;
+}
+.message-composer {
+  display: flex;
+  gap: var(--space-sm);
+  padding: var(--layout-gap) var(--page-padding);
+  background: #17181d;
+  border-top: 1px solid #292b32;
+}
+.message-composer input {
+  min-width: 0;
+  height: 42px;
+  flex: 1;
+  padding: 0 var(--space-md);
+  color: #f4f6fa;
+  background: #2a2c32;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  outline: none;
+}
+.message-composer input:focus {
+  border-color: #1688ff;
+}
+.message-composer button {
+  padding: var(--space-sm) var(--space-md);
+  border-radius: 9px;
+  color: #fff;
+  background: #1688ff;
+  font-weight: 600;
+}
+.message-composer button:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+.message-composer__error {
+  margin: 0;
+  padding: 0 var(--page-padding) var(--space-sm);
+  color: #ff9a9a;
+  font-size: 13px;
+  background: #17181d;
+}
+
+.settings-page {
+  padding: var(--page-padding);
+  background: #17181d;
+}
+
+.settings-page__back {
+  display: inline-block;
+  margin-bottom: 22px;
+  color: #1688ff;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .selected-chat {
+    height: 100%;
+    min-height: 0;
+  }
+
+  .selected-chat__header,
+  .message-composer {
+    flex: 0 0 auto;
+  }
+}
+
+.login-page {
+  display: grid;
+  min-height: 100dvh;
+  place-items: center;
+  padding: var(--page-padding);
+  background: #111217;
+}
+
+.login-form {
+  display: flex;
+  width: min(100%, 400px);
+  padding: 32px;
+  flex-direction: column;
+  gap: var(--layout-gap);
+  border: 1px solid #292b32;
+  border-radius: 16px;
+  background: #17181d;
+}
+
+.login-form__eyebrow {
+  color: #1688ff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.login-form h1 {
+  font-size: 24px;
+}
+
+.login-form__description {
+  color: #aeb4c0;
+  line-height: 1.45;
+}
+
+.login-form__error {
+  color: #ff8b8b;
+  font-size: 14px;
+}
+
+.login-form__submit {
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: 9px;
+  font-weight: 600;
+}
+
+.login-form__submit:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+.login-form__heading {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
